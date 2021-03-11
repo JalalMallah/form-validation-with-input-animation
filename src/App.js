@@ -1,7 +1,14 @@
+import AppProvider from 'context';
+import Form from 'components/Form';
+
 import './App.css';
 
 function App() {
-  return <h1>Hola, mundo! 👋😃</h1>;
+  return (
+    <AppProvider>
+      <Form />
+    </AppProvider>
+  );
 }
 
 export default App;
