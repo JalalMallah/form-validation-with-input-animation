@@ -11,6 +11,7 @@ const AppProvider = ({ children }) => {
   const [isPasswordValid, toggleIsPasswordValid] = useState(true);
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isConfirmPasswordValid, toggleIsConfirmPasswordValid] = useState(true);
+  const [isBannerActive, toggleIsBannerActive] = useState(false);
 
   const contextObject = {
     username,
@@ -29,6 +30,8 @@ const AppProvider = ({ children }) => {
     setConfirmPassword,
     isConfirmPasswordValid,
     toggleIsConfirmPasswordValid,
+    isBannerActive,
+    toggleIsBannerActive,
   };
 
   return <AppContext.Provider value={contextObject}>{children}</AppContext.Provider>;

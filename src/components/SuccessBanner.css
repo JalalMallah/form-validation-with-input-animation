@@ -1,0 +1,19 @@
+.success-banner {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--custom-green);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.6rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  transform: translate(-50%, 110%);
+}
+
+.success-banner.active {
+  transform: translate(-50%, 0%);
+}

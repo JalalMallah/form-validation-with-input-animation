@@ -11,13 +11,22 @@ import './Form.css';
 const Form = () => {
   const {
     username,
+    setUsername,
+    isUsernameValid,
     email,
+    setEmail,
+    isEmailValid,
     password,
+    setPassword,
+    isPasswordValid,
     confirmPassword,
+    setConfirmPassword,
+    isConfirmPasswordValid,
     toggleIsUsernameValid,
     toggleIsEmailValid,
     toggleIsPasswordValid,
     toggleIsConfirmPasswordValid,
+    toggleIsBannerActive,
   } = useContext(AppContext);
 
   const handleFormSubmit = e => {
@@ -27,6 +36,12 @@ const Form = () => {
     validateEmail();
     validatePassword();
     validateConfirmPassword();
+
+    if (username && email && password && confirmPassword) {
+      validateForm();
+    }
+
+    resetFormInputValues();
   };
 
   const validateUsername = () => {
@@ -38,7 +53,7 @@ const Form = () => {
   };
 
   const validateEmail = () => {
-    if (!isEmailValid(email)) {
+    if (!isProvidedEmailValid(email)) {
       toggleIsEmailValid(false);
     } else {
       toggleIsEmailValid(true);
@@ -61,9 +76,36 @@ const Form = () => {
     }
   };
 
-  const isEmailValid = email => {
+  const isProvidedEmailValid = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+  };
+
+  const validateForm = () => {
+    if (isUsernameValid && isEmailValid && isPasswordValid && isConfirmPasswordValid) {
+      showSuccessBanner();
+    }
+  };
+
+  const showSuccessBanner = () => {
+    toggleIsBannerActive(true);
+
+    setTimeout(() => {
+      toggleIsBannerActive(false);
+    }, 3000);
+  };
+
+  const resetFormInputValues = () => {
+    setTimeout(() => {
+      setUsername('');
+      setEmail('');
+      setPassword('');
+      setConfirmPassword('');
+      toggleIsUsernameValid(true);
+      toggleIsEmailValid(true);
+      toggleIsPasswordValid(true);
+      toggleIsConfirmPasswordValid(true);
+    }, 3000);
   };
 
   return (
