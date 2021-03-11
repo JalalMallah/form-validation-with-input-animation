@@ -1,0 +1,125 @@
+.form {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+.form h2 {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.form-element {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 0 0 20px;
+}
+
+.form-element input {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+}
+
+.form-element .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #252525;
+}
+
+.label::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid var(--custom-blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.label .label-text {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  color: #252525;
+  transition: all 0.3s ease;
+}
+
+.label .error-message {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  color: var(--custom-red);
+  transition: all 0.3s ease;
+}
+
+.form-element input:focus + .label::after,
+.form-element input:valid + .label::after {
+  transform: scaleX(1);
+}
+
+.form-element input:focus + .label .label-text,
+.form-element input:valid + .label .label-text {
+  transform: translateY(-120%);
+  color: var(--custom-blue);
+  font-size: 1.2rem;
+}
+
+.form-element input:focus + .label .error-message,
+.form-element input:valid + .label .error-message {
+  transform: translateY(-120%);
+  color: var(--custom-red);
+  font-size: 1.2rem;
+}
+
+.submit-button {
+  position: relative;
+  display: block;
+  margin: 50px 0 0;
+  padding: 10px 20px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.8rem;
+  color: #fff;
+  letter-spacing: 1px;
+  background-color: var(--custom-blue);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+.submit-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--custom-orange);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.submit-button:hover::after {
+  transform: scaleX(1);
+}
