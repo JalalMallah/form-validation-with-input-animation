@@ -47,33 +47,36 @@ const Form = () => {
   const validateUsername = () => {
     if (username.length < 3) {
       toggleIsUsernameValid(false);
-    } else {
-      toggleIsUsernameValid(true);
+      return;
     }
+
+    toggleIsUsernameValid(true);
   };
 
   const validateEmail = () => {
     if (!isProvidedEmailValid(email)) {
       toggleIsEmailValid(false);
-    } else {
-      toggleIsEmailValid(true);
+      return;
     }
+
+    toggleIsEmailValid(true);
   };
 
   const validatePassword = () => {
     if (password.length < 8) {
       toggleIsPasswordValid(false);
-    } else {
-      toggleIsPasswordValid(true);
+      return;
     }
+    toggleIsPasswordValid(true);
   };
 
   const validateConfirmPassword = () => {
     if (confirmPassword !== password || !confirmPassword) {
       toggleIsConfirmPasswordValid(false);
-    } else {
-      toggleIsConfirmPasswordValid(true);
+      return;
     }
+
+    toggleIsConfirmPasswordValid(true);
   };
 
   const isProvidedEmailValid = email => {
