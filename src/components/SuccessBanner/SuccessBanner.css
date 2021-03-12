@@ -17,3 +17,27 @@
 .success-banner.active {
   transform: translate(-50%, 0%);
 }
+
+@media (min-width: 768px) {
+  .success-banner {
+    width: 400px;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .success-banner {
+    width: 400px;
+    padding: 15px 20px;
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+  .success-banner {
+    width: 500px;
+    padding: 15px 20px;
+    font-size: 1.8rem;
+  }
+}
