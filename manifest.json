@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Form Validator",
+  "name": "Form validator with input animation",
   "icons": [
     {
       "src": "favicon.ico",
