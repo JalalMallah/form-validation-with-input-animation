@@ -1,6 +1,6 @@
 import AppProvider from 'context';
-import Form from 'components/Form';
-import SuccessBanner from 'components/SuccessBanner.js';
+import Form from 'components/Form/Form';
+import SuccessBanner from 'components/SuccessBanner/SuccessBanner';
 
 import './App.css';
 

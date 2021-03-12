@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { AppContext } from 'context';
 
-import UsernameInput from 'components/UsernameInput';
-import EmailInput from 'components/EmailInput';
-import PasswordInput from 'components/PasswordInput';
-import ConfirmPasswordInput from 'components/ConfirmPasswordInput';
+import UsernameInput from 'components/Form/Inputs/UsernameInput';
+import EmailInput from 'components/Form/Inputs/EmailInput';
+import PasswordInput from 'components/Form/Inputs/PasswordInput';
+import ConfirmPasswordInput from 'components/Form/Inputs/ConfirmPasswordInput';
 
 import './Form.css';
 
