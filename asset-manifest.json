@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/form-validation-with-input-animation/static/css/main.138ff046.chunk.css",
+    "main.js": "/form-validation-with-input-animation/static/js/main.ddb2ed36.chunk.js",
+    "main.js.map": "/form-validation-with-input-animation/static/js/main.ddb2ed36.chunk.js.map",
+    "runtime-main.js": "/form-validation-with-input-animation/static/js/runtime-main.1ae503b6.js",
+    "runtime-main.js.map": "/form-validation-with-input-animation/static/js/runtime-main.1ae503b6.js.map",
+    "static/js/2.a957b3a2.chunk.js": "/form-validation-with-input-animation/static/js/2.a957b3a2.chunk.js",
+    "static/js/2.a957b3a2.chunk.js.map": "/form-validation-with-input-animation/static/js/2.a957b3a2.chunk.js.map",
+    "index.html": "/form-validation-with-input-animation/index.html",
+    "static/css/main.138ff046.chunk.css.map": "/form-validation-with-input-animation/static/css/main.138ff046.chunk.css.map",
+    "static/js/2.a957b3a2.chunk.js.LICENSE.txt": "/form-validation-with-input-animation/static/js/2.a957b3a2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1ae503b6.js",
+    "static/js/2.a957b3a2.chunk.js",
+    "static/css/main.138ff046.chunk.css",
+    "static/js/main.ddb2ed36.chunk.js"
+  ]
+}
